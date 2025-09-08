@@ -117,6 +117,8 @@ person_info = {
 ```
 
 Let us use the _print()_ and _len()_ built-in functions. Print function takes unlimited number of arguments. An argument is a value which we can be passed or put inside the function parenthesis, see the example below.
+  
+
 
 **Example:**
 
