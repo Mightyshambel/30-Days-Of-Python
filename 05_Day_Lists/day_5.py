@@ -226,26 +226,55 @@ print(it_companies[3:])
 print(it_companies)
 print(it_companies[0:-3])
 # 20. Slice out the middle IT company or companies from the list
+middle_index =len(it_companies)//2
 print(it_companies)
-print("Slice out the middle",it_companies[:(len(it_companies))//2:])
+print("S",it_companies[:middle_index] + it_companies[middle_index+1:])
 
 # 21. Remove the first IT company from the list
+print("Remove the first item of the it comapnies",it_companies.remove(it_companies[0]))
+print(it_companies)
 # 22. Remove the middle IT company or companies from the list
+print(it_companies.remove(it_companies[middle_index]))
 # 23. Remove the last IT company from the list
+print(it_companies.remove(it_companies[-1]))
 # 24. Remove all IT companies from the list
+print(it_companies.clear())
 # 25. Destroy the IT companies list
+del it_companies
 # 26. Join the following lists:
 """
     front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
     back_end = ['Node','Express', 'MongoDB']
 """
+front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+back_end = ['Node','Express', 'MongoDB']
+stack =front_end + back_end
+print(stack)
 
 #27. After joining the lists in question 26. Copy the joined list and assign it to a variable full_stack, then insert Python and SQL after Redux.
-
+full_stack=stack.copy()
+full_stack.insert(5,"Python")
+full_stack.insert(6,"SQL")
+print(full_stack)
 ### Exercises: Level 2
 
 # 1. The following is a list of 10 students age
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages.sort()
+print(min(ages))
+print(max(ages))
 
+n = len(ages)
+if n % 2 == 0:
+    median_age = (ages[n // 2 - 1] + ages[n // 2]) / 2
+else:
+    median_age = ages[n // 2]
+print(median_age)
+
+average_age = sum(ages) / n
+print(average_age)
+print(max(ages)-min(ages))
+print(abs(min(ages)-average_age),abs(max(ages)-average_age))
 """
 ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 
